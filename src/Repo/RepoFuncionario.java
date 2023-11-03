@@ -73,4 +73,16 @@ public class RepoFuncionario{
 		}
 		return false;
 	}
+	
+	public boolean demitir(int codigo) {
+		for(int i = 0; i < funcionarios.length; i++) {
+			if(funcionarios[i] != null) {
+				if(funcionarios[i].getCodigo() == codigo) {
+					funcionarios[i].setDataDemissao();
+					return true;
+				}
+			}
+		}
+		return false;
+	}
 }

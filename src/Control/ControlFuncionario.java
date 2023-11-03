@@ -36,7 +36,7 @@ public class ControlFuncionario{
 		if(repo.buscarPorCodigo(codigo)) {
 			Funcionario funcs = view.alterar();
 			if(funcs != null) {
-				return repo.alterar(funcionario);
+				return repo.alterar(funcs);
 			}else {
 				return false;
 			}
@@ -55,7 +55,7 @@ public class ControlFuncionario{
 	public boolean demitir() {
 		int codigo = view.demitir();
 		if(repo.buscarPorCodigo(codigo)) {
-			return repo.demitir();
+			return repo.demitir(codigo);
 		}else {
 			return false;
 		}

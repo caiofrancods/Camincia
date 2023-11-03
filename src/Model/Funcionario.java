@@ -29,6 +29,9 @@ public class Funcionario {
 		return codFuncionario;
 	}
 
+	public void setDataDemissao() {
+		this.dataDemissao = new Date();
+	}
 	
 	
 }

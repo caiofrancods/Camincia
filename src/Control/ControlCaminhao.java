@@ -22,7 +22,7 @@ public class ControlCaminhao{
 	
 	public boolean excluir() {
 		int codigo = view.excluir();
-		if(buscarCodigo(codigo)) {
+		if(repo.buscarPorCodigo(codigo)) {
 			return repo.excluir(codigo);
 		}else {
 			return false;
