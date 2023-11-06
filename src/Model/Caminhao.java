@@ -18,5 +18,27 @@ public class Caminhao {
 	public int getCodigo() {
 		return codCaminhao;
 	}
+
+	public int getCodCaminhao() {
+		return codCaminhao;
+	}
+
+	public String getPlaca() {
+		return placa;
+	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public int getAno() {
+		return ano;
+	}
+
+	public double getCargaMaxima() {
+		return cargaMaxima;
+	}
+	
+	
 	
 }

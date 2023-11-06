@@ -1,5 +1,8 @@
 package Repo;
 
+import java.util.Arrays;
+import java.util.List;
+
 import Model.Caminhao;
 
 public class RepoCaminhao{
@@ -51,7 +54,7 @@ public class RepoCaminhao{
 		return false;
 	}
 
-	public Caminhao[] listar() {
+	public List<Caminhao> listar() {
 		Caminhao[] vetAux = new Caminhao[quant];
 		int k = 0;
 		for(int i = 0; i < caminhoes.length; i++) {
@@ -60,7 +63,8 @@ public class RepoCaminhao{
 				k++;
 			}
 		}
-		return vetAux;
+		List<Caminhao> lista = Arrays.asList(vetAux);
+		return lista;
 	}
 	
 	public boolean buscarPorCodigo(int codigo) {
@@ -72,5 +76,20 @@ public class RepoCaminhao{
 			}
 		}
 		return false;
+	}
+	
+	public Caminhao getCaminhao(int codigo) {
+		for(int i = 0; i < caminhoes.length; i++) {
+			if(caminhoes[i] != null) {
+				if(caminhoes[i].getCodigo() == codigo) {
+					return caminhoes[i];
+				}
+			}
+		}
+		return null;
+	}
+	
+	public int getProxCodigo() {
+		return quant;
 	}
 }

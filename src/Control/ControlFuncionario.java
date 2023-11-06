@@ -1,20 +1,22 @@
 package Control;
 
-import javax.swing.text.View;
-
 import Model.Funcionario;
 import Repo.RepoFuncionario;
+import View.ViewFuncionario;
+import java.util.List;
 
 public class ControlFuncionario{
 	
 	private RepoFuncionario repo;
+	private ViewFuncionario view;
 	
 	public ControlFuncionario() {
 		repo = new RepoFuncionario();
+		view = new ViewFuncionario();
 	}
 	
 	public boolean adicionar() {
-		Funcionario func = view.adicionar();
+		Funcionario func = view.adicionar(repo.getProxCodigo());
 		if(func != null) {
 			return repo.adicionar(func);
 		}else {
@@ -23,7 +25,7 @@ public class ControlFuncionario{
 	}
 	
 	public boolean excluir() {
-		int codigo = view.excluir();
+		int codigo = view.excluir(repo.listar());
 		if(repo.buscarPorCodigo(codigo)) {
 			return repo.excluir(codigo);
 		}else {
@@ -32,9 +34,9 @@ public class ControlFuncionario{
 	}
 	
 	public boolean alterar() {
-		int codigo = view.codigoAlterar();
+		int codigo = view.codigoAlterar(repo.listar());
 		if(repo.buscarPorCodigo(codigo)) {
-			Funcionario funcs = view.alterar();
+			Funcionario funcs = view.alterar(repo.getFuncionario(codigo));
 			if(funcs != null) {
 				return repo.alterar(funcs);
 			}else {
@@ -46,14 +48,13 @@ public class ControlFuncionario{
 	}
 	
 
-	public Funcionario listar() {
-		Funcionario[] funcionarios = repo.listar();
+	public void listar() {
+		List<Funcionario> funcionarios = repo.listar();
 		view.listar(funcionarios);
-		return null;
 	}
 	
 	public boolean demitir() {
-		int codigo = view.demitir();
+		int codigo = view.demitir(repo.listar());
 		if(repo.buscarPorCodigo(codigo)) {
 			return repo.demitir(codigo);
 		}else {

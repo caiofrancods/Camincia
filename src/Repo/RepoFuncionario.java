@@ -1,6 +1,8 @@
 package Repo;
 
 import Model.Funcionario;
+import java.util.Arrays;
+import java.util.List;
 
 public class RepoFuncionario{
 	
@@ -51,7 +53,7 @@ public class RepoFuncionario{
 		return false;
 	}
 
-	public Funcionario[] listar() {
+	public List<Funcionario> listar() {
 		Funcionario[] vetAux = new Funcionario[quant];
 		int k = 0;
 		for(int i = 0; i < funcionarios.length; i++) {
@@ -60,7 +62,8 @@ public class RepoFuncionario{
 				k++;
 			}
 		}
-		return vetAux;
+		List<Funcionario> lista = Arrays.asList(vetAux);
+		return lista;
 	}
 	
 	public boolean buscarPorCodigo(int codigo) {
@@ -74,6 +77,17 @@ public class RepoFuncionario{
 		return false;
 	}
 	
+	public Funcionario getFuncionario(int codigo) {
+		for(int i = 0; i < funcionarios.length; i++) {
+			if(funcionarios[i] != null) {
+				if(funcionarios[i].getCodigo() == codigo) {
+					return funcionarios[i];
+				}
+			}
+		}
+		return null;
+	}
+	
 	public boolean demitir(int codigo) {
 		for(int i = 0; i < funcionarios.length; i++) {
 			if(funcionarios[i] != null) {
@@ -85,4 +99,9 @@ public class RepoFuncionario{
 		}
 		return false;
 	}
+		
+	public int getProxCodigo() {
+		return quant;
+	}
+	
 }

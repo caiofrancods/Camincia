@@ -29,6 +29,38 @@ public class Funcionario {
 		return codFuncionario;
 	}
 
+	
+	public String getCpf() {
+		return cpf;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public String getCargo() {
+		return cargo;
+	}
+
+	public Date getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public Date getDataContratacao() {
+		return dataContratacao;
+	}
+
+	public Date getDataDemissao() {
+		return dataDemissao;
+	}
+
+	public double getSalario() {
+		return salario;
+	}
+
+	public int getCnh() {
+		return 0;
+	}
 	public void setDataDemissao() {
 		this.dataDemissao = new Date();
 	}
