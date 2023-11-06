@@ -12,9 +12,7 @@ public class Sistema {
 		Principal principal = new Principal();
 		int opc = principal.menu();
 		while(opc != -1) {
-			if(opc == -1) {
-				
-			}else if(opc < 1000) {
+			if(opc < 1000) {
 				switch (opc) {
 				case 101: 
 					controlFuncionario.adicionar();
