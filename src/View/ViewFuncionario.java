@@ -12,14 +12,23 @@ public class ViewFuncionario {
 	
 	public int excluir(List<Funcionario> funcionarios) {
 		JanelaSelecaoExclusaoFuncionario j = new JanelaSelecaoExclusaoFuncionario(funcionarios);
-		Funcionario f = j.getFuncionario();
-		return f.getCodigo();
+		try{
+			Funcionario f = j.getFuncionario();
+			return f.getCodigo();
+		}catch (Exception e) {
+			return -1;
+		}
+		
 	}
 	
 	public int codigoAlterar(List<Funcionario> funcionarios) {
 		JanelaSelecaoAlteracaoFuncionario j = new JanelaSelecaoAlteracaoFuncionario(funcionarios);
-		Funcionario f = j.getFuncionario();
-		return f.getCodigo();
+		try{
+			Funcionario f = j.getFuncionario();
+			return f.getCodigo();
+		}catch (Exception e) {
+			return -1;
+		}
 	}
 	
 	public Funcionario alterar(Funcionario f) {

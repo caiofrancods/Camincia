@@ -3,6 +3,8 @@ package Control;
 import Model.Funcionario;
 import Repo.RepoFuncionario;
 import View.ViewFuncionario;
+
+import java.util.Date;
 import java.util.List;
 
 public class ControlFuncionario{
@@ -60,5 +62,13 @@ public class ControlFuncionario{
 		}else {
 			return false;
 		}
+	}
+	
+	public void init() {
+		Date dt = new Date();
+		Funcionario f1 = new Funcionario(10, "112.234.244-45", "Emerson", "Gerente", dt, dt, 4000.00);
+		repo.adicionar(f1);
+		Funcionario f2 = new Funcionario(11, "115.445.343-23", "Luciano", "Expeditor", dt, dt, 2000.00);
+		repo.adicionar(f2);
 	}
 }

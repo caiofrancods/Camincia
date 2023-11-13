@@ -17,6 +17,7 @@ public class ControlCaminhao{
 	
 	public boolean adicionar() {
 		Caminhao caminhao = view.adicionar(repo.getProxCodigo());
+		System.out.println(caminhao);
 		if(caminhao != null) {
 			return repo.adicionar(caminhao);
 		}else {
@@ -50,6 +51,13 @@ public class ControlCaminhao{
 	public void listar() {
 		List<Caminhao> caminhoes = repo.listar();
 		view.listar(caminhoes);
+	}
+	
+	public void init() {
+		Caminhao c1 = new Caminhao(0, "FJF4585", "Volks", 2015, 2000.0);
+		repo.adicionar(c1);
+		Caminhao c2 = new Caminhao(1, "NHE8759", "Mercedes", 2010, 1500.0);
+		repo.adicionar(c2);
 	}
 }
 

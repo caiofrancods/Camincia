@@ -9,6 +9,8 @@ public class Sistema {
 	public static void main(String[] args) {
 		ControlFuncionario controlFuncionario = new ControlFuncionario();
 		ControlCaminhao controlCaminhao = new ControlCaminhao();
+		controlFuncionario.init();
+		controlCaminhao.init();
 		Principal principal = new Principal();
 		int opc = principal.menu();
 		while(opc != -1) {

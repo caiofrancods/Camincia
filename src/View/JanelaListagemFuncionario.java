@@ -64,8 +64,8 @@ public class JanelaListagemFuncionario extends JDialog{
 		tabela.getColumnModel().getColumn(4).setResizable(false);
 		tabela.getColumnModel().getColumn(5).setPreferredWidth(200);
 		tabela.getColumnModel().getColumn(5).setResizable(false);
-		tabela.getColumnModel().getColumn(6).setPreferredWidth(70);
-		tabela.getColumnModel().getColumn(6).setResizable(false);
+//		tabela.getColumnModel().getColumn(6).setPreferredWidth(70);
+//		tabela.getColumnModel().getColumn(6).setResizable(false);
 
 		// nao permite alteracao da ordem das colunas
 		tabela.getTableHeader().setReorderingAllowed(false);

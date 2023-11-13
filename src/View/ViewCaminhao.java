@@ -13,14 +13,23 @@ public class ViewCaminhao {
 	
 	public int excluir(List<Caminhao> caminhoes) {
 		JanelaSelecaoExclusaoCaminhao j = new JanelaSelecaoExclusaoCaminhao(caminhoes);
-		Caminhao f = j.getCaminhao();
-		return f.getCodigo();
+		try{
+			Caminhao f = j.getCaminhao();
+			return f.getCodigo();
+		}catch (Exception e) {
+			return -1;
+		}
 	}
 	
 	public int codigoAlterar(List<Caminhao> caminhoes) {
 		JanelaSelecaoAlteracaoCaminhao j = new JanelaSelecaoAlteracaoCaminhao(caminhoes);
-		Caminhao f = j.getCaminhao();
-		return f.getCodigo();
+		try{
+			Caminhao f = j.getCaminhao();
+			return f.getCodigo();
+		}catch (Exception e) {
+			return -1;
+		}
+		
 	}
 	
 	public Caminhao alterar(Caminhao c) {

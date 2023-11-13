@@ -11,7 +11,7 @@ import Model.Funcionario;
 public class FuncionarioTableModel extends AbstractTableModel{
 	private List<Funcionario> lista;
 	private String[] colunas = { "CODIGO", "NOME", "CPF", "DATA.NASC", "DATA.CONT",
-			"CARGO", "CNH" };
+			"CARGO"};
 
 	private static final int CODIGO = 0;
 	private static final int NOME = 1;
@@ -19,7 +19,6 @@ public class FuncionarioTableModel extends AbstractTableModel{
 	private static final int DATANASC = 3;
 	private static final int DATACONT = 4;
 	private static final int CARGO = 5;
-	private static final int CNH = 6;
 
 	private SimpleDateFormat sdf;
 
@@ -65,8 +64,6 @@ public class FuncionarioTableModel extends AbstractTableModel{
 			return sdf.format(f.getDataContratacao());
 		case CARGO:
 			return f.getCargo();
-		case CNH:
-			return f.getCnh();	
 		default:
 			throw new IndexOutOfBoundsException(
 					"Ultrapassou os limites das colunas");

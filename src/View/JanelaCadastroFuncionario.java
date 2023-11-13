@@ -116,7 +116,7 @@ public class JanelaCadastroFuncionario extends JDialog implements ActionListener
 	    
 
 	    JLabel lbDataN = new JLabel("Data Nasc.");
-	    lbDataN.setBounds(200, 70, 50, 25);
+	    lbDataN.setBounds(200, 70, 100, 25);
 	    panel.add(lbDataN);
 	    try {
 	        tfDataNascimento = new JFormattedTextField(new MaskFormatter("##/##/####"));
@@ -128,7 +128,7 @@ public class JanelaCadastroFuncionario extends JDialog implements ActionListener
 
 
 	    JLabel lbDataC = new JLabel("Data Contratação");
-	    lbDataC.setBounds(10, 130, 80, 25);
+	    lbDataC.setBounds(10, 130, 130, 25);
 	    panel.add(lbDataC);
 	    try {
 	        tfDataContratacao = new JFormattedTextField(new MaskFormatter("##/##/####"));
@@ -155,15 +155,15 @@ public class JanelaCadastroFuncionario extends JDialog implements ActionListener
 	    tfSalario.setBounds(155, 155, 100, 25);
 	    panel.add(tfSalario);
 	    
-	    JLabel lbCNH = new JLabel("CNH");
-	    lbCNH.setBounds(10, 190, 50, 25);
-	    panel.add(lbCNH);
-	    tfCNH = new JTextField();
-	    if(!(funcionario instanceof Motorista)) {
-	    	tfCNH.setEditable(false);
-	    }
-	    tfCNH.setBounds(10, 215, 100, 25);
-	    panel.add(tfCNH);
+//	    JLabel lbCNH = new JLabel("CNH");
+//	    lbCNH.setBounds(10, 190, 50, 25);
+//	    panel.add(lbCNH);
+//	    tfCNH = new JTextField();
+//	    if(!(funcionario instanceof Motorista)) {
+//	    	tfCNH.setEditable(false);
+//	    }
+//	    tfCNH.setBounds(10, 215, 100, 25);
+//	    panel.add(tfCNH);
 
 	    JPanel panelBotoes = new JPanel();
 	    panelBotoes.setLayout(new FlowLayout(FlowLayout.RIGHT, 10, 10));

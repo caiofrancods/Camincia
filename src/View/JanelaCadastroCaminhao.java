@@ -88,7 +88,7 @@ public class JanelaCadastroCaminhao extends JDialog implements ActionListener  {
 	    panel.add(tfMarca);
 
 
-	    JLabel lbAno = new JLabel("CPF");
+	    JLabel lbAno = new JLabel("Ano");
 	    lbAno.setBounds(10, 70, 50, 25);
 	    panel.add(lbAno);
 	    String maskAno = "####";
@@ -110,7 +110,7 @@ public class JanelaCadastroCaminhao extends JDialog implements ActionListener  {
 	    panel.add(tfPlaca);
 	    
 	    JLabel lbCargaMax = new JLabel("Carga Maxima");
-	    lbCargaMax.setBounds(360, 70, 80, 25);
+	    lbCargaMax.setBounds(360, 70, 130, 25);
 	    panel.add(lbCargaMax);
 	    tfCargaMax = new JTextField();
 	    tfCargaMax.setBounds(360, 95, 130, 25);
@@ -145,13 +145,13 @@ public class JanelaCadastroCaminhao extends JDialog implements ActionListener  {
 				passou = false;
 			}
 			String placa = tfPlaca.getText();
-			if (placa.length() > 7)
+			if (placa.length() > 5)
 				tfPlaca.setBackground(Color.WHITE);
 			else {
 				tfPlaca.setBackground(Color.PINK);
 				passou = false;
 			}
-			int ano =0;
+			int ano = 0;
 			try {
 				ano = Integer.parseInt(tfAno.getText());
 				if (ano < 1000 || ano > 9999) {
@@ -172,6 +172,7 @@ public class JanelaCadastroCaminhao extends JDialog implements ActionListener  {
 
 			if (passou) {
 				Caminhao c = new Caminhao(codCaminhao, placa, marca, ano, cargamax);
+				this.caminhao = c;
 			} else {
 				JOptionPane.showMessageDialog(this, "Não preencheu algum campo obrigatório");
 			}

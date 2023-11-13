@@ -61,7 +61,7 @@ public class JanelaMenu extends JDialog {
 		mntmExcluir_1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            	opc = 1002;
+            	opc = 102;
             	dispose();
             }
         });
@@ -72,7 +72,7 @@ public class JanelaMenu extends JDialog {
 		mntmListar_1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            	opc = 1004;
+            	opc = 104;
             	dispose();
             }
         });
@@ -108,7 +108,7 @@ public class JanelaMenu extends JDialog {
 		mntmExcluir.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            	opc = 102;
+            	opc = 1002;
             	dispose();
             }
         });
@@ -119,7 +119,7 @@ public class JanelaMenu extends JDialog {
 		mntmListar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-            	opc = 104;
+            	opc = 1004;
             	dispose();
             }
         });
